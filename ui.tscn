@@ -1,0 +1,136 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq0ah5jsnrp27"]
+
+[ext_resource type="Texture2D" uid="uid://1dw0h4o58xb8" path="res://gfx/ammo/ammobase.png" id="1_is7re"]
+[ext_resource type="Texture2D" uid="uid://dywbtt8ekojgr" path="res://gfx/cards/aces/amyspecial.png" id="1_u44r5"]
+[ext_resource type="Texture2D" uid="uid://cj4tjft2ktylt" path="res://gfx/concept/roomdummy.png" id="3_8jsb4"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftPanel"]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="LeftPanel/VBoxContainer"]
+layout_mode = 2
+text = "AMMO"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftPanel/VBoxContainer"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = -30
+alignment = 1
+
+[node name="AmmoFlinch" type="Control" parent="LeftPanel/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="LeftPanel/VBoxContainer/VBoxContainer/AmmoFlinch"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_is7re")
+
+[node name="Label" type="Label" parent="LeftPanel/VBoxContainer/VBoxContainer/AmmoFlinch"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Flinches"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RightPanel"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="RightPanel/VBoxContainer"]
+layout_mode = 2
+text = "ACES"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RightPanel/VBoxContainer"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = -30
+alignment = 1
+
+[node name="AmySpecial" type="Control" parent="RightPanel/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(96, 128)
+layout_mode = 2
+
+[node name="CardGFX" type="TextureRect" parent="RightPanel/VBoxContainer/VBoxContainer/AmySpecial"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_u44r5")
+
+[node name="AmySpecial2" type="Control" parent="RightPanel/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(96, 128)
+layout_mode = 2
+
+[node name="CardGFX" type="TextureRect" parent="RightPanel/VBoxContainer/VBoxContainer/AmySpecial2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_u44r5")
+
+[node name="AmySpecial3" type="Control" parent="RightPanel/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(96, 128)
+layout_mode = 2
+
+[node name="CardGFX" type="TextureRect" parent="RightPanel/VBoxContainer/VBoxContainer/AmySpecial3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_u44r5")
+
+[node name="AmySpecial4" type="Control" parent="RightPanel/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(96, 128)
+layout_mode = 2
+
+[node name="CardGFX" type="TextureRect" parent="RightPanel/VBoxContainer/VBoxContainer/AmySpecial4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_u44r5")
+
+[node name="Room" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8jsb4")
